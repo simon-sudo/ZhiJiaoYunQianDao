@@ -1,7 +1,6 @@
-import pickle
+import configparser
 
 import requests
-import configparser
 
 userName = input("请输入你的学号：")
 userPwd = input("请输入你的密码：")
@@ -20,7 +19,7 @@ data = {
     'userName': userName,
     'appVersion': '3',
 }
-html = requests.post(url=url, headers=headers, data=data)
+html = requests.post(url=url, data=data)
 html_json = html.json()
 # 将配置信息写入配置文件
 config_writer = configparser.ConfigParser()  # 实例化配置写入

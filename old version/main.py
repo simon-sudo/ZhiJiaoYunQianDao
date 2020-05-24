@@ -5,7 +5,11 @@ print("【1】职教云签到改命功能")
 game = int(input("请选择功能："))
 if game == 0:
     from autoqiandao import main
+
     main()
 elif game == 1:
     from buqiao import menu
+
     menu()
+else:
+    print("Good Bye!")
